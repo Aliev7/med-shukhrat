@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicio</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <!-- AOS CSS (Optional: If you choose to use AOS library instead of custom animations) -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet"> -->
+</head>
+
+<body>
+
+    
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <div class="container d-flex align-items-center justify-content-between">
+    
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="Logo" class="logo-img">
+            </a>
+    
+            <!-- Language Selection (aligned with toggler) -->
+            <li class="nav-item dropdown language-dropdown" style="margin-top: -30px;">
+                <a class="nav-link d-flex align-items-center" href="#" id="languageDropdown" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag">
+                    English
+                </a>
+                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="ruindex.html">
+                            <img src="https://flagcdn.com/w20/ru.png" alt="Russian" class="language-flag me-2">
+                            Russian
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="index.html">
+                            <img src="https://flagcdn.com/w20/us.png" alt="English" class="language-flag me-2">
+                            English
+                        </a>
+                    </li>
+                    <li>
+                        <a class="dropdown-item d-flex align-items-center" href="uzindex.html">
+                            <img src="https://flagcdn.com/w20/uz.png" alt="Uzbek" class="language-flag me-2">
+                            Uzbek
+                        </a>
+                    </li>
+                </ul>
+            </li>
+    
+            <!-- Toggler Button for Mobile -->
+            <button class="navbar-toggler" style="border: none; outline: none; box-shadow: none;" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="custom-toggler-icon"></span>
+            </button>
+    
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+    
+                <!-- Appointment Button -->
+                <div class="d-flex align-items-center ms-3">
+                </div>
+            </div>
+    
+        </div>
+    </nav>
+    
+    
+
+    <!-- Carousel Section -->
+    <div id="carouselExampleIndicators" class="carousel slide carousel-custom" data-bs-ride="carousel">
+        <!-- Indicators -->
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+
+        <!-- Carousel Items -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/slide-1.jpg" class="d-block w-100 carousel-image hidden" data-animation="fade-in" alt="Slide 1">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./img/slide-2.jpg" class="d-block w-100 carousel-image hidden" data-animation="fade-in" alt="Slide 2">
+            </div>
+
+            <div class="carousel-item">
+                <img src="./img/slide-3.jpg" class="d-block w-100 carousel-image hidden" data-animation="fade-in" alt="Slide 3">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Services Cards Section -->
+    <div class="container">
+        <div class="row mt-5 mb-5 row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+            <!-- Card 1 -->
+            <div class="col">
+                <div class="card card-custom hidden" data-animation="fade-in">
+                    <div class="card-body">
+                        <i class="fas fa-user-md"></i>
+                        <h5 class="card-title mt-3">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                    <div class="card-overlay"></div>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="col">
+                <div class="card card-custom hidden" data-animation="fade-in">
+                    <div class="card-body">
+                        <i class="fas fa-hospital"></i>
+                        <h5 class="card-title mt-3">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                    <div class="card-overlay"></div>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="col">
+                <div class="card card-custom hidden" data-animation="fade-in">
+                    <div class="card-body">
+                        <i class="fas fa-heartbeat"></i>
+                        <h5 class="card-title mt-3">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                    <div class="card-overlay"></div>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="col">
+                <div class="card card-custom hidden" data-animation="fade-in">
+                    <div class="card-body">
+                        <i class="fas fa-stethoscope"></i>
+                        <h5 class="card-title mt-3">Card Title</h5>
+                        <p class="card-text">Some quick example text to build on the card title.</p>
+                    </div>
+                    <div class="card-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Section -->
+    <div class="container">
+        <div class="about-section hidden" id="aboutUs" data-animation="slide-up">
+            <h2>ABOUT US</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
+                sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+    </div>
+
+    <div class="container mt-3 mb-5">
+        <div class="row d-flex">
+            <!-- Image Column -->
+            <div class="col-lg-6">
+                <img src="./img/about.jpg" class="img-fluid rounded about-image hidden" data-animation="fade-in" alt="Seidman Cancer Center">
+            </div>
+
+            <!-- Content Column -->
+            <div class="col-lg-6 hidden" data-animation="slide-up">
+                <h2 class="fw-bold text-dark">Voluptatem dignissimos provident quasi corporis <br>voluptates sit
+                    assumenda.</h2>
+                <p class="text-muted fst-italic">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+
+                <ul class="list-unstyled service-list">
+                    <li class="d-flex align-items-center mb-2 hidden" data-animation="fade-in">
+                        <i class="fa fa-regular fa-circle-check me-2"></i>
+                        <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2 hidden" data-animation="fade-in">
+                        <i class="fa fa-regular fa-circle-check me-2"></i>
+                        <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </li>
+                    <li class="d-flex align-items-center mb-2 hidden" data-animation="fade-in">
+                        <i class="fa fa-regular fa-circle-check me-2"></i>
+                        <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>
+                    </li>
+                </ul>
+
+                <p class="text-muted final-text hidden" data-animation="slide-up">Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                    irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                    est laborum.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="container mt-5">
+        <div class="row text-center">
+            <!-- Card 1 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card stat-card hidden" data-animation="fade-in">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h2 class="counter" data-target="85">0</h2>
+                    </div>
+                    <p><strong>Doctors</strong> consequuntur quae qui deca rode</p>
+                    <a href="#" class="stat-link">Find out more »</a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card stat-card hidden" data-animation="fade-in">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h2 class="counter" data-target="26">0</h2>
+                    </div>
+                    <p><strong>Departments</strong> adipisci atque cum quia aut numquam delectus</p>
+                    <a href="#" class="stat-link">Find out more »</a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card stat-card hidden" data-animation="fade-in">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <h2 class="counter" data-target="14">0</h2>
+                    </div>
+                    <p><strong>Research Lab</strong> aut commodi quaerat. Aliquam ratione</p>
+                    <a href="#" class="stat-link">Find out more »</a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card stat-card hidden" data-animation="fade-in">
+                    <div class="d-flex align-items-center">
+                        <div class="stat-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h2 class="counter" data-target="150">0</h2>
+                    </div>
+                    <p><strong>Awards</strong> rerum asperiores dolor molestiae dolorum</p>
+                    <a href="#" class="stat-link">Find out more »</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Statistics Cards Section (with Uzbek) -->
+    <div class="container py-5">
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stat-card text-center shadow-sm p-4 hidden" data-animation="fade-in">
+                    <i class="fa-solid fa-bed fa-3x mb-3"></i>
+                    <div class="stat-number" data-target="270">0</div>
+                    <p class="fw-bold">Общее количество коек</p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stat-card text-center shadow-sm p-4 hidden" data-animation="fade-in">
+                    <i class="fa-solid fa-users fa-3x mb-3"></i>
+                    <div class="stat-number" data-target="266">0</div>
+                    <p class="fw-bold">Количество занятых коек</p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="stat-card text-center shadow-sm p-4 hidden" data-animation="fade-in">
+                    <i class="fa-solid fa-user-doctor fa-3x mb-3"></i>
+                    <div class="stat-number" data-target="4">0</div>
+                    <p class="fw-bold">Количество свободных коек</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="container">
+        <div class="about-section hidden" id="services" data-animation="slide-up">
+            <h2>Services</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit.
+                Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste
+                officiis
+                commodi quidem hic quas.
+            </p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row text-center">
+            <!-- Feature 1 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h5>Lorem Ipsum</h5>
+                    <span class="feature-line"></span>
+                    <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati.</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h5>Dolor Sitema</h5>
+                    <span class="feature-line"></span>
+                    <p>Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h5>Sed ut perspiciatis</h5>
+                    <span class="feature-line"></span>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.</p>
+                </div>
+            </div>
+
+            <!-- Feature 4 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-dna"></i>
+                    </div>
+                    <h5>Magni Dolores</h5>
+                    <span class="feature-line"></span>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+                </div>
+            </div>
+
+            <!-- Feature 5 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h5>Nemo Enim</h5>
+                    <span class="feature-line"></span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                </div>
+            </div>
+
+            <!-- Feature 6 -->
+            <div class="col-lg-4 col-md-6 mb-4 hidden" data-animation="fade-in">
+                <div class="feature-box">
+                    <div class="feature-icon">
+                        <i class="fas fa-wheelchair"></i>
+                    </div>
+                    <h5>Nemo Enim</h5>
+                    <span class="feature-line"></span>
+                    <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Departments Section -->
+    <div class="container">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>Departments</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate.
+                Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="departments-wrapper">
+                    <!-- Left Side: Service List -->
+                    <div class="service-list hidden" data-animation="fade-in">
+                        <div class="service-item active" onclick="showService('cardiology', this)">
+                            <h5>Cardiology</h5>
+                        </div>
+                        <div class="service-item" onclick="showService('neurology', this)">
+                            <h5>Neurology</h5>
+                        </div>
+                        <div class="service-item" onclick="showService('hepatology', this)">
+                            <h5>Hepatology</h5>
+                        </div>
+                        <div class="service-item" onclick="showService('pediatrics', this)">
+                            <h5>Pediatrics</h5>
+                        </div>
+                    </div>
+
+                    <!-- Right Side: Service Content -->
+                    <div class="service-details-container hidden" data-animation="fade-in">
+                        <div id="cardiology" class="service-details active">
+                            <h2>Cardiology</h2>
+                            <div class="service-content">
+                                <img src="img/dep1.jpg" alt="Cardiology" class="service-image hidden" data-animation="fade-in">
+                            </div>
+                        </div>
+
+                        <div id="neurology" class="service-details">
+                            <h2>Neurology</h2>
+                            <div class="service-content">
+                                <img src="img/dep2.jpg" alt="Neurology" class="service-image hidden" data-animation="fade-in">
+                            </div>
+                        </div>
+
+                        <div id="hepatology" class="service-details">
+                            <h2>Hepatology</h2>
+                            <div class="service-content">
+                                <img src="img/dep3.jpg" alt="Hepatology" class="service-image hidden" data-animation="fade-in">
+                            </div>
+                        </div>
+
+                        <div id="pediatrics" class="service-details">
+                            <h2>Pediatrics</h2>
+                            <div class="service-content">
+                                <img src="img/dep4.jpg" alt="Pediatrics" class="service-image hidden" data-animation="fade-in">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>Testimonials</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate.
+                Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+    </div>
+
+    <div class="container py-5 mb-5">
+        <div class="row text-center">
+            <!-- Testimonial 1 -->
+            <div class="col-md-4 position-relative">
+                <div class="testimonial-box mt-4 hidden" data-animation="fade-in">
+                    <p>
+                        <span class="quote">“</span>
+                        Proin iaculis purus consequat sem cure digni ssim donec porttitor entum suscipit rhoncus.
+                        Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                        <span class="quote">”</span>
+                    </p>
+                </div>
+                <div class="testimonial-author hidden" data-animation="fade-in">
+                    <img src="img/dep3.jpg" alt="Saul Goodman" class="author-image">
+                    <h5>Saul Goodman</h5>
+                    <p>CEO & Founder</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="col-md-4 position-relative">
+                <div class="testimonial-box mt-4 hidden" data-animation="fade-in">
+                    <p>
+                        <span class="quote">“</span>
+                        Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum
+                        eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                        <span class="quote">”</span>
+                    </p>
+                </div>
+                <div class="testimonial-author hidden" data-animation="fade-in">
+                    <img src="img/dep2.jpg" alt="Sara Wilsson" class="author-image">
+                    <h5>Sara Wilsson</h5>
+                    <p>Designer</p>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="col-md-4 position-relative">
+                <div class="testimonial-box mt-4 hidden" data-animation="fade-in">
+                    <p>
+                        <span class="quote">“</span>
+                        Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
+                        duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                        <span class="quote">”</span>
+                    </p>
+                </div>
+                <div class="testimonial-author hidden" data-animation="fade-in">
+                    <img src="img/dep1.jpg" alt="Jena Karlis" class="author-image">
+                    <h5>Jena Karlis</h5>
+                    <p>Store Owner</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Doctors Section -->
+    <div class="doctors-section">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>DOCTORS</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate.
+                Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="row text-center">
+                <!-- Doctor 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="doctor-card hidden" data-animation="fade-in">
+                        <img src="img/doctors-1.jpg" alt="Walter White" class="doctor-image">
+                        <div class="doctor-info">
+                            <h5>Walter White</h5>
+                            <p>Chief Medical Officer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 2 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="doctor-card hidden" data-animation="fade-in">
+                        <img src="img/doctors-2.jpg" alt="Sarah Johnson" class="doctor-image">
+                        <div class="doctor-info">
+                            <h5>Sarah Johnson</h5>
+                            <p>Anesthesiologist</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 3 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="doctor-card hidden" data-animation="fade-in">
+                        <img src="img/doctors-3.jpg" alt="William Anderson" class="doctor-image">
+                        <div class="doctor-info">
+                            <h5>William Anderson</h5>
+                            <p>Cardiology</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Doctor 4 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="doctor-card hidden" data-animation="fade-in">
+                        <img src="img/doctors-4.jpg" alt="Amanda Jepson" class="doctor-image">
+                        <div class="doctor-info">
+                            <h5>Amanda Jepson</h5>
+                            <p>Neurosurgeon</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <div class="container">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>Gallery</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate.
+                Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+    </div>
+
+    <div class="container text-center py-5">
+        <div class="carousel-wrapper hidden" data-animation="fade-in">
+            <img src="img/dep1.jpg" alt="Image 1" class="carousel-img active" onclick="showImage(this)">
+            <img src="img/dep2.jpg" alt="Image 2" class="carousel-img" onclick="showImage(this)">
+            <img src="img/dep3.jpg" alt="Image 3" class="carousel-img" onclick="showImage(this)">
+            <img src="img/dep4.jpg" alt="Image 4" class="carousel-img" onclick="showImage(this)">
+            <img src="img/slide-1.jpg" alt="Image 5" class="carousel-img" onclick="showImage(this)">
+        </div>
+
+        <!-- Carousel Dots -->
+        <div class="d-flex justify-content-center align-items-center gap-2 mt-4">
+            <div class="dot active" onclick="showImage(document.querySelectorAll('.carousel-img')[0])"></div>
+            <div class="dot" onclick="showImage(document.querySelectorAll('.carousel-img')[1])"></div>
+            <div class="dot" onclick="showImage(document.querySelectorAll('.carousel-img')[2])"></div>
+            <div class="dot" onclick="showImage(document.querySelectorAll('.carousel-img')[3])"></div>
+            <div class="dot" onclick="showImage(document.querySelectorAll('.carousel-img')[4])"></div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>Frequently Asked Questions</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea.
+            </p>
+        </div>
+
+        <div class="container">
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <!-- Accordion Items -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne1" aria-expanded="false"
+                            aria-controls="flush-collapseOne1">
+                            Accordion Item #1
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne1" class="accordion-collapse collapse" aria-labelledby="flush-headingOne1"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 2 -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne2" aria-expanded="false"
+                            aria-controls="flush-collapseOne2">
+                            Accordion Item #2
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne2" class="accordion-collapse collapse" aria-labelledby="flush-headingOne2"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 3 -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne3" aria-expanded="false"
+                            aria-controls="flush-collapseOne3">
+                            Accordion Item #3
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne3" class="accordion-collapse collapse" aria-labelledby="flush-headingOne3"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 4 -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne4" aria-expanded="false"
+                            aria-controls="flush-collapseOne4">
+                            Accordion Item #4
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne4" class="accordion-collapse collapse" aria-labelledby="flush-headingOne4"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 5 -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne5" aria-expanded="false"
+                            aria-controls="flush-collapseOne5">
+                            Accordion Item #5
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne5" class="accordion-collapse collapse" aria-labelledby="flush-headingOne5"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+
+                <!-- Accordion Item 6 -->
+                <div class="accordion-item hidden" data-animation="fade-in">
+                    <h2 class="accordion-header" id="flush-headingOne6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flush-collapseOne6" aria-expanded="false"
+                            aria-controls="flush-collapseOne6">
+                            Accordion Item #6
+                        </button>
+                    </h2>
+                    <div id="flush-collapseOne6" class="accordion-collapse collapse" aria-labelledby="flush-headingOne6"
+                        data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">Placeholder content for this accordion.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="container">
+        <div class="about-section hidden" data-animation="slide-up">
+            <h2>Contact</h2>
+            <span class="about-section-line"></span>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
+                consectetur velit. Quisquam quos quisquam cupiditate.
+                Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.
+            </p>
+        </div>
+    </div>
+
+    <!-- Google Map -->
+    <div class="map-container hidden" data-animation="fade-in">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1675.3407816866804!2d64.4378906860826!3d39.77136592726848!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f50058d77fbe2cf%3A0xe33f94645b744372!2sBukhoro%20Diagnostika%20Tibbiy%20Markazi!5e0!3m2!1sru!2s!4v1737627990040!5m2!1sru!2s"
+            class="map-iframe" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+
+    <!-- Contact Information Boxes -->
+    <div class="container py-5">
+        <div class="row justify-content-center g-4">
+            <!-- Address -->
+            <div class="col-md-4 d-flex">
+                <div class="contact-box hidden" data-animation="fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h6>Our Address</h6>
+                    <p>Bukhoro Diagnostika Tibbiy Markazi</p>
+                </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-4 d-flex">
+                <div class="contact-box hidden" data-animation="fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h6>Email Us</h6>
+                    <p>info@example.com</p>
+                    <p>contact@example.com</p>
+                </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="col-md-4 d-flex">
+                <div class="contact-box hidden" data-animation="fade-in">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h6>Call Us</h6>
+                    <a href="tel:+998990260006">+1 5589 55488 55</a>
+                    <p>+1 6678 254445 41</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer-section">
+        <div class="container">
+            <div class="row">
+                <!-- Company Info -->
+                <div class="col-md-3">
+                    <h5>Medicio</h5>
+                    <p>A108 Adam Street<br>NY 535022, USA</p>
+                    <p><strong>Phone:</strong> +1 5589 55488 55</p>
+                    <p><strong>Email:</strong> info@example.com</p>
+                </div>
+
+                <!-- Useful Links -->
+                <div class="col-md-3">
+                    <!-- Add any additional content or links here -->
+                </div>
+
+                <!-- Our Services -->
+                <div class="col-md-3">
+                    <!-- Add any additional content or links here -->
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-md-3">
+                    <h5>Useful Links</h5>
+                    <ul class="useful-links">
+                        <li><a href="#"><span style="color: #3fbbc0;">></span> Home</a></li>
+                        <li><a href="#aboutUs"><span style="color: #3fbbc0;">></span> About us</a></li>
+                        <li><a href="#services"><span style="color: #3fbbc0;">></span> Services</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; Copyright <strong>Dr. Shukhrat Med</strong>. All Rights Reserved</p>
+        </div>
+    </div>
+
+    <!-- Font Awesome Script -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        crossorigin="anonymous"></script>
+
+    <!-- External JavaScript -->
+    <script src="js/script.js"></script>
+
+    <!-- Optional: AOS JS (If using AOS library) -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in milliseconds
+            once: true, // Whether animation should happen only once - while scrolling down
+        });
+    </script> -->
+
+    <!-- Custom JavaScript for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Existing Counter Code
+            const counters = document.querySelectorAll('.stat-number');
+
+            function startCounting() {
+                counters.forEach(counter => {
+                    const target = +counter.getAttribute('data-target');
+                    let count = 0;
+                    const increment = target / 100;  // Adjust for speed
+
+                    const updateCount = () => {
+                        count += increment;
+                        if (count < target) {
+                            counter.innerText = Math.ceil(count);
+                            requestAnimationFrame(updateCount);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+                    updateCount();
+                });
+            }
+
+            // Trigger counting animation when the section is in the viewport
+            function checkCounterVisibility() {
+                const countersSection = document.querySelector('.container');
+                const rect = countersSection.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                    startCounting();
+                    window.removeEventListener('scroll', checkCounterVisibility);
+                }
+            }
+
+            window.addEventListener('scroll', checkCounterVisibility);
+            checkCounterVisibility();
+
+            // Scroll Animation Code
+            const animatedElements = document.querySelectorAll('.hidden');
+
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const element = entry.target;
+                        const animationType = element.getAttribute('data-animation');
+
+                        // Apply the corresponding animation class
+                        if (animationType === 'fade-in') {
+                            element.classList.add('animate-fade-in');
+                        } else if (animationType === 'slide-up') {
+                            element.classList.add('animate-slide-up');
+                        }
+                        // You can add more animation types here
+
+                        // Remove 'hidden' class after animation starts
+                        element.classList.remove('hidden');
+                        // Stop observing the element
+                        observer.unobserve(element);
+                    }
+                });
+            }, observerOptions);
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Function to handle service content switching
+            window.showService = function(serviceId, element) {
+                // Remove 'active' class from all service items
+                document.querySelectorAll('.service-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                // Add 'active' class to the clicked service item
+                element.classList.add('active');
+
+                // Hide all service details
+                document.querySelectorAll('.service-details').forEach(detail => {
+                    detail.classList.remove('active');
+                });
+                // Show the selected service detail
+                document.getElementById(serviceId).classList.add('active');
+            }
+
+            // Function to handle image gallery clicks
+            window.showImage = function(imgElement) {
+                // Remove 'active' class from all images
+                document.querySelectorAll('.carousel-img').forEach(img => {
+                    img.classList.remove('active');
+                });
+                // Add 'active' class to the clicked image
+                imgElement.classList.add('active');
+
+                // Remove 'active' class from all dots
+                document.querySelectorAll('.dot').forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                // Find the index of the clicked image
+                const images = document.querySelectorAll('.carousel-img');
+                let index = Array.from(images).indexOf(imgElement);
+                // Add 'active' class to the corresponding dot
+                document.querySelectorAll('.dot')[index].classList.add('active');
+            }
+        });
+    </script>
+</body>
+
+</html>
